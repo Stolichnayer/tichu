@@ -272,7 +272,7 @@ function checkHandCombination() {
                 return true;
             }
             //Pair
-            if(val0 == val1 && val2 == val3) 
+            if(val0 == val1 && val2 == val3 && (val0 - val2 == 1)) 
                 return true;            
             break;
      
