@@ -174,8 +174,9 @@ function playCards() {
             hand_of_player[0][play_pos[i]] = null;
         }
     }
-    else {
-        alert("Not correct combination");
+    else {       
+        showWrongCombinationAlert();
+
     }
 
 
@@ -209,6 +210,8 @@ function checkHandCombination() {
 
     console.log(counter);
     switch(counter) {
+        case 0:
+            return true;
         case 1:
             //Single Card
             return true;
@@ -279,5 +282,18 @@ function checkHandCombination() {
     }
  
     
+    
+}
+
+function showWrongCombinationAlert() {
+    var alert = document.getElementById("alert");
+    
+
+    if(alert.style.display == "none") {
+        setTimeout(function(){ alert.style.display = "none"; }, 3000);
+        alert.style.display = "block";
+    }
+        
+
     
 }
