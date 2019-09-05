@@ -57,6 +57,10 @@ class Card {
         return this.value;
     }
 
+    getNumValue(){
+        return this.num_value;
+    }
+
     isLifted() {
         return this.lifted;
     }

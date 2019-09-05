@@ -262,19 +262,36 @@ function checkHandCombination() {
             
             break;
         case 4:
-            var val0 = hand_of_player[0][position[0]].getValue();
-            var val1 = hand_of_player[0][position[1]].getValue();
-            var val2 = hand_of_player[0][position[2]].getValue();
-            var val3 = hand_of_player[0][position[3]].getValue();
+            var val0 = hand_of_player[0][position[0]].getNumValue();
+            var val1 = hand_of_player[0][position[1]].getNumValue();
+            var val2 = hand_of_player[0][position[2]].getNumValue();
+            var val3 = hand_of_player[0][position[3]].getNumValue();
             
             //Bomb
             if(val0 == val1 && val0 == val2 && val0 == val3) {                
                 return true;
             }
             //Pair
-            if(val0 == val1 && val2 == val3 && (val0 - val2 == 1)) 
-                return true;            
-            break;
+                //Phoenix check
+            if(val3 == 0.5){
+                console.log("phoenix");
+                if(((val0 == val1) && (val1 - val2) == 1) || ((val1 == val2) && (val0 - val1) == 1))
+                    return true;
+                console.log((val0 == val1));
+                console.log((val2 - val3));
+                console.log("false");
+                console.log(val0);
+                console.log(val1);
+                console.log(val2);
+                console.log(val3);
+                return false;
+            }
+            else{
+                if(val0 == val1 && val2 == val3 && (val1 - val2 == 1))
+                    return true;
+                return false;
+            }
+            
      
 
         default:
