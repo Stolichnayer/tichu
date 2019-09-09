@@ -273,17 +273,14 @@ function checkHandCombination() {
             }
             //Pair
                 //Phoenix check
+
+
+                // Majong skylos den prpei!
             if(val3 == 0.5){
-                console.log("phoenix");
+                if(val2 == 1)
+                    return false;
                 if(((val0 == val1) && (val1 - val2) == 1) || ((val1 == val2) && (val0 - val1) == 1))
                     return true;
-                console.log((val0 == val1));
-                console.log((val2 - val3));
-                console.log("false");
-                console.log(val0);
-                console.log(val1);
-                console.log(val2);
-                console.log(val3);
                 return false;
             }
             else{
