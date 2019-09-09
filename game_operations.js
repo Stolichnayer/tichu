@@ -272,11 +272,9 @@ function checkHandCombination() {
                 return true;
             }
             //Pair
-                //Phoenix check
-
-
-                // Majong skylos den prpei!
+                //Phoenix check                
             if(val3 == 0.5){
+                //Phoenix can't replace Mahjong
                 if(val2 == 1)
                     return false;
                 if(((val0 == val1) && (val1 - val2) == 1) || ((val1 == val2) && (val0 - val1) == 1))
@@ -288,13 +286,49 @@ function checkHandCombination() {
                     return true;
                 return false;
             }
+        case 5:
+            //Full house
+            var val0 = hand_of_player[0][position[0]].getNumValue();
+            var val1 = hand_of_player[0][position[1]].getNumValue();
+            var val2 = hand_of_player[0][position[2]].getNumValue();
+            var val3 = hand_of_player[0][position[3]].getNumValue();
+            var val4 = hand_of_player[0][position[4]].getNumValue();
+
+            //There is no Phoenix
+            if(val4 != 0.5){
+                //XXX-YY
+                if(val0 == val1 && val0 == val2 && val3 == val4)
+                    return true;
+                //YY-XXX
+                if(val0 == val1 && val2 == val3 && val2 == val4)
+                    return true;
+            }
+            //There is Phoenix
+            else{
+                //XX-YY-P , YY-XX-P
+                if(val0 == val1 && val2 == val3)
+                    return true;
+                //XXX-Y-P
+                    // if Y = Mahjong, false
+                if(val3 == 1)
+                    return false;
+                if(val0 == val1 && val0 == val2)
+                    return true;
+                //X-YYY-P
+                if(val1 == val2 && val1 == val3)
+                    return true;
+
+            }
+
+
+            break;   
             
-     
 
         default:
             return false;
     }
  
+    return false;
     
     
 }

@@ -10,18 +10,21 @@
     <link rel='stylesheet' type='text/css' media='screen' href='index.css'>
     <link rel="preload" as="image" href="map.png" media="(max-width: 600px)">
     <link rel="shortcut icon" type="image/x-icon" href="images/tichu.png" />
+    <link href="images/fontawesome-free-5.10.2-web/css/all.css" rel="stylesheet">
+
+    <script src="game_operations.js"></script>
+    <script src="card.js"></script>
+    <script src="deck.js"></script>
     
 </head>
-<script src="game_operations.js"></script>
-<script src="card.js"></script>
-<script src="deck.js"></script>
+
 
 
 
 
 <body draggable="false">
 
-
+    
 
     <div class="frame" draggable="false">
 
@@ -45,12 +48,15 @@
 
 
         <div class="my_deck" draggable="false">
+
         <!-- Wrong combination alert box-->
             <div class="alert" id="alert" style="display: none">
                 <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
                 <strong>Wrong</strong> card combination!
               </div>
-
+            
+            <button id="bomb_btn">Bomb <i class="fas fa-bomb"></i></button>
+            
 
             <div onclick="toggleCardLift('scene14')" class="scene scene--card" id="scene14">
                 <div class="card" id="card14">
@@ -58,12 +64,8 @@
                     <div class="card__face card__face--back">
                         <div id="insider">hehehe</div>
                     </div>
-
                 </div>
             </div>
-
-
-
 
             <div onclick="toggleCardLift('scene13')" class="scene scene--card" id="scene13">
                 <div class="card" id="card13">

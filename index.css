@@ -357,3 +357,12 @@ footer {
   .closebtn:hover {
     color: black;
   }
+
+  #bomb_btn {
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    left: 200px;
+    bottom: 200px;
+    font-size: 20px;
+}
