@@ -278,19 +278,15 @@ function isStraight(position) {
         let counter = 0;
         for(let i = 0; i < position.length - 2; i++){
             diff = hand_of_player[0][position[i]].getNumValue() - hand_of_player[0][position[i + 1]].getNumValue();
-            if(diff > 2)
+            if(diff > 2 || diff == 0)
                 return false;
             if(diff == 2)
-                counter++;
-                
+                counter++;                
         }
         console.log(counter);
         if(counter < 2)
             return true;
-        return false;
-
-        
-        
+        return false;       
     }
     //There is not Phoenix
     else{
@@ -302,9 +298,6 @@ function isStraight(position) {
         console.log(flag);
         return !flag;
     }
-
-
-
 }
 
 function isStraightBomb(position) {
