@@ -1,6 +1,18 @@
 var hand_of_player;
 
+var mouseDown = 0;
+document.onmousedown = function() { 
+  ++mouseDown;
+}
+document.onmouseup = function() {
+  --mouseDown;
+}
+
+
+
 function toggleCardLift(scene_id) {
+    
+
 
     //get element
     card_elem = document.getElementById(scene_id);
@@ -245,8 +257,16 @@ function checkHandCombination() {
                 return true;
 
             return false;
+
         default:
-            return false;
+            //Straight Bomb
+            if (isStraightBomb(position))
+                return true;
+
+            //Straight
+            if (isStraight(position))
+                return true;
+            
     }
 
 
@@ -301,7 +321,16 @@ function isStraight(position) {
 }
 
 function isStraightBomb(position) {
+    if(!isStraight(position))
+        return false;    
 
+    var first_suit = hand_of_player[0][position[0]].getSuit();
+    for(let i = 1; i < position.length; i++){
+        if(first_suit != hand_of_player[0][position[i]].getSuit())
+            return false;       
+    }
+    console.log("Straight Bomb");
+    return true;
 }
 
 function isFullHouse(position) {
@@ -421,3 +450,10 @@ function isPair(position) {
             return false;
     }
 }
+
+function isRunOfPairs(position){
+    //if number of lifted cards is not even
+    if(position.length % 2 != 0)
+        return false;
+}
+
