@@ -1,17 +1,12 @@
 var hand_of_player;
 
-var mouseDown = 0;
-document.onmousedown = function() { 
-  ++mouseDown;
-}
-document.onmouseup = function() {
-  --mouseDown;
-}
+
 
 
 
 function toggleCardLift(scene_id) {
-    
+
+    console.log("toggle");
 
 
     //get element
