@@ -88,7 +88,7 @@ function isFullHouse(position) {
     var val2 = hand_of_player[0][position[2]].getNumValue();
     var val3 = hand_of_player[0][position[3]].getNumValue();
     var val4 = hand_of_player[0][position[4]].getNumValue();
-
+    
     //There is no Phoenix
     if (val4 != 0.5) {
         //XXX-YY
@@ -176,32 +176,43 @@ function isRunOfPairs(position) {
     //If there is Dog, false
     if (hand_of_player[0][position[position.length - 1]].getSuit() == "Dog")
         return false;
-    //
+    //If there is Majong, false
+    if (hand_of_player[0][position[position.length - 1]].getSuit() == "Mahjong")
+        return false;
+    if (hand_of_player[0][position[position.length - 2]].getSuit() == "Mahjong")
+        return false;
+    if (hand_of_player[0][position[position.length - 3]].getSuit() == "Mahjong")
+        return false;
+
 
     //There is Phoenix
     if (hand_of_player[0][position[position.length - 1]].getSuit() == "Phoenix") {
-        let counter = 0;
-        for (let i = 0; i < position.length - 2; i++) {
-            diff = hand_of_player[0][position[i]].getNumValue() - hand_of_player[0][position[i + 1]].getNumValue();
-            if (diff > 2 || diff == 0)
-                return false;
-            if (diff == 2)
-                counter++;
-        }
-        console.log(counter);
-        if (counter < 2)
-            return true;
-        return false;
+        
     }
     //There is not Phoenix
     else {
-        let flag = false;
-        for (let i = 0; i < position.length - 1; i++) {
-            if (hand_of_player[0][position[i]].getNumValue() - hand_of_player[0][position[i + 1]].getNumValue() != 1)
-                flag = true;
+        var left_card = [];
+        var right_card = [];
+
+        for(let i in position){
+            if(i % 2 == 0)
+                left_card.push(hand_of_player[0][position[i]].getNumValue());
+            else
+                right_card.push(hand_of_player[0][position[i]].getNumValue());
         }
-        console.log(flag);
-        return !flag;
+
+        for(let i in left_card){
+            if(left_card[i] != right_card[i])
+                return false;
+        }
+
+        for(let i = 0; i < left_card.length - 1; i++){
+            if(left_card[i] - left_card[i + 1] != 1)
+                return false;
+
+        }
+        return true;
+
     }
     
 }
