@@ -89,6 +89,7 @@ function isFullHouse(position) {
     var val3 = hand_of_player[0][position[3]].getNumValue();
     var val4 = hand_of_player[0][position[4]].getNumValue();
     
+    
     //There is no Phoenix
     if (val4 != 0.5) {
         //XXX-YY
@@ -100,6 +101,9 @@ function isFullHouse(position) {
     }
     //There is Phoenix
     else {
+        //XXXX-P Case of Bomb with Phoenix (!)
+        if(val0 == val1 && val0 == val2 && val0 == val3)
+            return false;
         //XX-YY-P , YY-XX-P
         if (val0 == val1 && val2 == val3)
             return true;
