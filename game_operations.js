@@ -36,7 +36,7 @@ function toggleCardLift(scene_id) {
 
     }
 
-    console.log(card_elem);
+    //console.log(card_elem);
 
 
 
@@ -195,7 +195,7 @@ function checkHandCombination() {
     var counter = 0;
     var position = [];
     for (let i in hand_of_player[0]) {
-        console.log(hand_of_player[0]);
+        //console.log(hand_of_player[0]);
         if (hand_of_player[0][i] == null)
             continue;
 
