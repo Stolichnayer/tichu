@@ -189,14 +189,23 @@ function isRunOfPairs(position) {
         return false;
 
 
+    var left_card = [];
+    var right_card = [];
+
     //There is Phoenix
     if (hand_of_player[0][position[position.length - 1]].getSuit() == "Phoenix") {
         
+        for(let i = 0; i < position.length - 1; i++){
+            if(i % 2 == 0)
+                left_card.push(hand_of_player[0][position[i]].getNumValue());
+            else
+                right_card.push(hand_of_player[0][position[i]].getNumValue());
+
+        }
     }
     //There is not Phoenix
     else {
-        var left_card = [];
-        var right_card = [];
+
 
         for(let i in position){
             if(i % 2 == 0)
