@@ -189,23 +189,61 @@ function isRunOfPairs(position) {
         return false;
 
 
-    var left_card = [];
-    var right_card = [];
+
 
     //There is Phoenix
     if (hand_of_player[0][position[position.length - 1]].getSuit() == "Phoenix") {
         
+
+        
         for(let i = 0; i < position.length - 1; i++){
-            if(i % 2 == 0)
-                left_card.push(hand_of_player[0][position[i]].getNumValue());
-            else
-                right_card.push(hand_of_player[0][position[i]].getNumValue());
+
+            var left_card = [];
+            var right_card = [];
+            
+            var flag = true;
+            //Copy Hand
+            var temp_hand = [];            
+            for(let j in position){
+                temp_hand.push(hand_of_player[0][position[j]]);
+            }
+
+            //Insert at position: i, Delete 0 elements, Item: 
+            temp_hand.splice(i, 0, temp_hand[i]);
+
+            //Same check as case with no Phoenix as below
+            for(let j in position){
+                if(j % 2 == 0)
+                    left_card.push(temp_hand[j].getNumValue());
+                else
+                    right_card.push(temp_hand[j].getNumValue());
+            }
+            console.log(left_card);
+            console.log(right_card);
+    
+            for(let j in left_card){
+                if(left_card[j] != right_card[j])
+                    flag = false;
+            }
+    
+            for(let j = 0; j < left_card.length - 1; j++){
+                if(left_card[j] - left_card[j + 1] != 1)
+                    flag = false;
+    
+            }
+
+            if(flag)
+                break;
+            
 
         }
+        return flag;
+
     }
     //There is not Phoenix
     else {
-
+        var left_card = [];
+        var right_card = [];
 
         for(let i in position){
             if(i % 2 == 0)
