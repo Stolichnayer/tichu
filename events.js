@@ -2,11 +2,11 @@ var mouseDown = 0;
 var now_lifting = false;
 
 document.onmousedown = function() {
-    console.log("mousedown");
+    //console.log("mousedown");
     mouseDown = 1;
 }
 document.onmouseup = function() {
-    console.log("mouseup");
+    //console.log("mouseup");
     mouseDown = 0;
 }
 

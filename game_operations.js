@@ -1,6 +1,6 @@
 function toggleCardLift(scene_id) {
 
-    console.log("toggle");
+    
 
 
     //get element
@@ -36,7 +36,7 @@ function toggleCardLift(scene_id) {
 
     }
 
-    //console.log(card_elem);
+    
 
 
 
@@ -76,12 +76,12 @@ function toggleCardBrightness() {
     }
 
     // Darken non-lifted cards
-    for (let i in not_lifted_pos) {   //console.log(not_lifted_pos.length);  
+    for (let i in not_lifted_pos) {    
         hand_of_player_elem[13 - not_lifted_pos[i]].style.filter = "brightness(60%)"
     }
 
     // Brighten lifted cards
-    for (let i in lifted_pos) {   //console.log(not_lifted_pos.length);  
+    for (let i in lifted_pos) {    
         hand_of_player_elem[13 - lifted_pos[i]].style.filter = "brightness(100%)"
     }
 
@@ -113,7 +113,7 @@ function depictCards(hand_of_player) {
 
     var back_cards = document.getElementsByClassName("card__face--back");
 
-    console.log(back_cards);
+    
 
     for (let i = 1; i <= 14; i++) {
 
