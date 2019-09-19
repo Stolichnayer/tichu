@@ -298,4 +298,7 @@ function positionCards() {
     }
     deck[0].style.width = 711 - (counter * 45) + "px";
 
+    if(cards.length == 0)
+        deck[0].style.width = 0;
+
 }
