@@ -107,6 +107,8 @@ function initialize() {
     //document.getElementsByClassName("frame")[0].style.transform = "scale(0.8)";
 
     flipCards();
+
+    positionCards();
 }
 
 function depictCards(hand_of_player) {
@@ -178,6 +180,8 @@ function playCards() {
 
     }
 
+    positionCards();
+    
 
 
 
@@ -275,3 +279,23 @@ function showWrongCombinationAlert() {
     }
 }
 
+function positionCards() {
+
+    var cards = [];
+    var deck = document.getElementsByClassName("my_deck");
+    var counter = 0;
+
+    for(let i = 0; i < 14; i++) {
+        var card = document.getElementById("scene" + (i + 1));
+        if(hand_of_player[0][i] != null)
+            cards.push(card);
+        else
+            counter++;
+    }
+    console.log(cards);
+    for(let i in cards){
+        cards[i].style.left = 20 + (i * 45) + "px";
+    }
+    deck[0].style.width = 711 - (counter * 45) + "px";
+
+}

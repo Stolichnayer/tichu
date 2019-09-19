@@ -29,17 +29,6 @@ input {
     left: 0px;
 }
 
-
-
-/*.card {    
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    border-radius: 10px;
-    border: 0px solid black;
-  }
-*/
-
-
 .scene {
     width: 88px;
     height: 139px;
@@ -88,68 +77,6 @@ input {
   }
 
 
-#scene1 {
-    position: absolute;
-    left: 20px;  
-}
-
-#scene2 {       
-    position: absolute;
-    left: 80px; 
-}
-
-#scene3 {       
-    position: absolute;
-    left: 140px;  
-}
-
-
-#scene4 {       
-    position: absolute;
-    left: 200px;   
-}
-#scene5 {
-   
-    position: absolute;
-    left: 260px;  
-}
-#scene6 {       
-    position: absolute;
-    left: 320px;
-}
-#scene7 {   
-    position: absolute;
-    left: 380px;
-}
-#scene8 {       
-    position: absolute;
-    left: 440px;
-}
-#scene9 {   
-    position: absolute;
-    left: 500px;   
-}
-#scene10 {       
-    position: absolute;
-    left: 560px;
-}
-#scene11 {   
-    position: absolute;
-    left: 620px;  
-}
-#scene12 {       
-    position: absolute;
-    left: 680px;   
-}
-#scene13 {   
-    position: absolute;
-    left: 740px; 
-}
-#scene14 {       
-    position: absolute;
-    left: 800px;  
-    
-}
 
 .my_deck {
     background: black;    
@@ -158,7 +85,7 @@ input {
     height: 160px;
     margin: auto;
     margin-top: 30%;
-    width: 909px;
+    width: 711px;
     position: relative;
     z-index: 0;    
     bottom: -180px;
