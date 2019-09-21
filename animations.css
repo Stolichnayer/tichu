@@ -1,0 +1,30 @@
+@keyframes slide-top {
+    100% {
+      transform: translateY(-50px);
+    }
+  }
+
+
+@keyframes slide-top-reverse {
+    100% {
+      transform: translateY(-50px);
+    }
+  }
+
+@keyframes play-card {
+    100% {
+        transform: translateY(-340px);
+    }
+  }
+
+.slide-top {    
+    animation: slide-top 0.15s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.slide-top-reverse {    
+    animation: slide-top-reverse 0.15s cubic-bezier(0.250, 0.460, 0.450, 0.940) reverse both;  
+}
+
+.play-card {    
+    animation: play-card 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}

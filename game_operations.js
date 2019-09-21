@@ -148,6 +148,8 @@ function flipCards() {
 
     }, 200);
 
+    var deck = document.getElementsByClassName("my_deck");
+    deck[0].style.background = "rgba(255,255,255,0.2)";
 }
 
 function playCards() {
@@ -163,7 +165,7 @@ function playCards() {
             if (hand_of_player[0][i] == null)
                 continue;
             if (hand_of_player[0][i].isLifted()) {
-                hand_of_player_elem[13 - i].style.display = "none";
+                //hand_of_player_elem[13 - i].style.display = "none";
                 hand_of_player[0][i].toggleLifted();
                 toggleCardBrightness();
                 play_pos.push(i);
@@ -173,18 +175,15 @@ function playCards() {
 
         for (let i in play_pos) {
             hand_of_player[0][play_pos[i]] = null;
+            hand_of_player_elem[13 - play_pos[i]].classList.add("play-card");
         }
     }
     else {
         showWrongCombinationAlert();
 
     }
-
     positionCards();
-    
-
-
-
+    positionPlayedCards(play_pos);
 }
 
 function moveCards() {
@@ -292,13 +291,30 @@ function positionCards() {
         else
             counter++;
     }
-    console.log(cards);
+    
     for(let i in cards){
-        cards[i].style.left = 20 + (i * 45) + "px";
+        cards[i].style.left = 20 + (i * 45)  + counter * 45/2 + "px";
     }
-    deck[0].style.width = 711 - (counter * 45) + "px";
 
-    if(cards.length == 0)
-        deck[0].style.width = 0;
+    if(cards.length == 0) {
+        deck[0].style.background = "transparent";
+    } 
+}
 
+function positionPlayedCards(play_pos){
+    
+    var cards = [];
+    var counter = 14 - play_pos.length;
+    
+    for(let i = 0; i < play_pos.length; i++) {
+        var num = parseInt(play_pos[i]) + 1;
+        
+        var card = document.getElementById("scene" + num);
+        
+        cards.push(card);
+    }    
+    
+    for(let i in cards){
+        cards[i].style.left = 20 + (i * 45)  + counter * 45/2 + "px";
+    }
 }

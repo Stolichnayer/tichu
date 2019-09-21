@@ -3,27 +3,6 @@ input {
     user-select:none;    
 }
 
-
-/* Lift animation */
-  @-webkit-keyframes floatBubble {
-    0% {
-        top:0;
-    }
-    100% {
-        top: -70px;
-    }
-}
-@keyframes floatBubble {
-    0% {
-        top:0;
-    }
-    100% {
-        top: -70px;
-    }
-}
-
-
-
 .scene--card {
     position: absolute;
     left: 0px;
@@ -33,14 +12,11 @@ input {
     width: 88px;
     height: 139px;
     perspective: 600px;
-
-
   }
   
   .card {
     width: 100%;
     height: 100%;
-
     transition: transform 1s;
     transform-style: preserve-3d;
     cursor: pointer;
@@ -78,9 +54,8 @@ input {
 
 
 
-.my_deck {
-    background: black;    
-    background:rgba(255,255,255,0.2);
+.my_deck {   
+    background: transparent;
     border-radius: 6px;
     height: 160px;
     margin: auto;
@@ -89,7 +64,7 @@ input {
     position: relative;
     z-index: 0;    
     bottom: -180px;
-
+    
     /* Center card*/
     display: flex;
     align-items: center;
@@ -224,42 +199,6 @@ footer {
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
 }
-
-
-
-.slide-top {
-    
-    animation: slide-top 0.15s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-
-    
-}
-
-.slide-top-reverse {
-    
-    animation: slide-top-reverse 0.15s cubic-bezier(0.250, 0.460, 0.450, 0.940) reverse both;
-    
-    
-}
-
-@keyframes slide-top {
-    
-    0% {
-      transform: translateY(0);
-    }
-    100% {
-      transform: translateY(-50px);
-    }
-  }
-
-
-@keyframes slide-top-reverse {
-    0% {
-      transform: translateY(0);
-    }
-    100% {
-      transform: translateY(-50px);
-    }
-  }
 
   .alert {
     padding: 20px;
