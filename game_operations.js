@@ -158,7 +158,6 @@ function playCards() {
 
     var play_pos = [];
 
-
     if (checkHandCombination()) {
         // play cards
         for (let i in hand_of_player[0]) {
@@ -172,6 +171,12 @@ function playCards() {
 
             }
         }
+
+        if(play_pos.length == 0)
+            return;
+
+        addCombinationToTrick(play_pos);
+        replaceCardsOnBoard();
 
         for (let i in play_pos) {
             hand_of_player[0][play_pos[i]] = null;
@@ -317,4 +322,32 @@ function positionPlayedCards(play_pos){
     for(let i in cards){
         cards[i].style.left = 20 + (i * 45)  + counter * 45/2 + "px";
     }
+}
+
+function addCombinationToTrick(play_pos){
+
+    
+    var combination = [];
+    var cards = [];  
+
+    for(let i in play_pos) {        
+        cards.push(hand_of_player[0][play_pos[i]]);
+    }
+    combination.push(cards);
+
+    _trick.push(combination);
+}
+
+function replaceCardsOnBoard() {
+    
+    for(let i = 0; i < 14; i++){
+        if(hand_of_player[0][i] == null) {
+            var j = i + 1;
+            var card = document.getElementById("scene" + j);
+            //card.style.display = "none";
+            card.style.zIndex = "-999";
+        }
+    }
+     
+
 }
