@@ -11,9 +11,114 @@
     }
   }
 
-@keyframes play-card {
+  @keyframes play-card {
     100% {
         transform: translateY(-340px);
+    }
+  }
+
+  :root {
+ 
+    --position1: 0;
+    --position2: 0;
+    --position3: 0;
+    --position4: 0;
+    --position5: 0;
+    --position6: 0;
+    --position7: 0;
+    --position8: 0;
+    --position9: 0;
+    --position10: 0;
+    --position11: 0;
+    --position12: 0;
+    --position13: 0;
+    --position14: 0; 
+
+  }
+
+
+  @keyframes play-card1 {
+    100% {
+        transform: translateY(-340px);
+        left: var(--position1);
+    }
+  }
+  @keyframes play-card2 {
+    100% {
+        transform: translateY(-340px);
+        left: var(--position2);
+    }
+  }
+  @keyframes play-card3 {
+    100% {
+        transform: translateY(-340px);
+        left: var(--position3);
+    }
+  }
+  @keyframes play-card4 {
+    100% {
+        transform: translateY(-340px);
+        left: var(--position4);
+    }
+  }
+  @keyframes play-card5 {
+    100% {
+        transform: translateY(-340px);
+        left: var(--position5);
+    }
+  }
+  @keyframes play-card6 {
+    100% {
+        transform: translateY(-340px);
+        left: var(--position6);
+    }
+  }
+  @keyframes play-card7 {
+    100% {
+        transform: translateY(-340px);
+        left: var(--position7);
+    }
+  }
+  @keyframes play-card8 {
+    100% {
+        transform: translateY(-340px);
+        left: var(--position8);
+    }
+  }
+  @keyframes play-card9 {
+    100% {
+        transform: translateY(-340px);
+        left: var(--position9);
+    }
+  }
+  @keyframes play-card10 {
+    100% {
+        transform: translateY(-340px);
+        left: var(--position10);
+    }
+  }
+  @keyframes play-card11 {
+    100% {
+        transform: translateY(-340px);
+        left: var(--position11);
+    }
+  }
+  @keyframes play-card12 {
+    100% {
+        transform: translateY(-340px);
+        left: var(--position12);
+    }
+  }
+  @keyframes play-card13 {
+    100% {
+        transform: translateY(-340px);
+        left: var(--position13);
+    }
+  }
+  @keyframes play-card14 {
+    100% {
+        transform: translateY(-340px);
+        left: var(--position14);
     }
   }
 
@@ -26,5 +131,63 @@
 }
 
 .play-card {    
-    animation: play-card 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: play-card 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
+
+.play-card1 {    
+  animation: play-card1 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.play-card2 {    
+  animation: play-card2 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.play-card3 {    
+  animation: play-card3 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.play-card4 {    
+  animation: play-card4 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.play-card5 {    
+  animation: play-card5 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.play-card6 {    
+  animation: play-card6 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.play-card7 {    
+  animation: play-card7 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.play-card8 {    
+  animation: play-card8 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.play-card9 {    
+  animation: play-card9 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.play-card10 {    
+  animation: play-card10 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.play-card11 {    
+  animation: play-card11 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.play-card12 {    
+  animation: play-card12 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.play-card13 {    
+  animation: play-card13 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.play-card14 {    
+  animation: play-card14 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }

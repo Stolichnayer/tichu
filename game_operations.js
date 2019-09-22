@@ -180,7 +180,7 @@ function playCards() {
 
         for (let i in play_pos) {
             hand_of_player[0][play_pos[i]] = null;
-            hand_of_player_elem[13 - play_pos[i]].classList.add("play-card");
+            //hand_of_player_elem[13 - play_pos[i]].classList.add("play-card");
         }
     }
     else {
@@ -284,7 +284,7 @@ function showWrongCombinationAlert() {
 }
 
 function positionCards() {
-
+    
     var cards = [];
     var deck = document.getElementsByClassName("my_deck");
     var counter = 0;
@@ -307,20 +307,37 @@ function positionCards() {
 }
 
 function positionPlayedCards(play_pos){
-    
+
     var cards = [];
     var counter = 14 - play_pos.length;
+    let root = document.documentElement;
+    
     
     for(let i = 0; i < play_pos.length; i++) {
         var num = parseInt(play_pos[i]) + 1;
         
-        var card = document.getElementById("scene" + num);
-        
+        var card = document.getElementById("scene" + num);        
         cards.push(card);
     }    
     
+    /*
     for(let i in cards){
         cards[i].style.left = 20 + (i * 45)  + counter * 45/2 + "px";
+    }
+    */
+
+    for(let i in cards){
+        left = (20 + (i * 45)  + counter * 45/2);
+        
+        var tmp = parseInt(play_pos[i]) + 1;
+        var property = "--position" + tmp;
+        
+        console.log(property);
+        root.style.setProperty(property, left + "px");
+        
+        var tmp = parseInt(play_pos[i]) + 1;
+       cards[i].classList.add("play-card" + tmp);
+      
     }
 }
 
