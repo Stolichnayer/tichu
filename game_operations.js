@@ -336,16 +336,18 @@ function addCombinationToTrick(play_pos){
     combination.push(cards);
 
     _trick.push(combination);
+
 }
 
-function replaceCardsOnBoard() {
+function replaceCardsOnBoard(play_pos) {
     
     for(let i = 0; i < 14; i++){
         if(hand_of_player[0][i] == null) {
             var j = i + 1;
             var card = document.getElementById("scene" + j);
             //card.style.display = "none";
-            card.style.zIndex = "-999";
+            card.style.zIndex -= 1000;
+            
         }
     }
      
