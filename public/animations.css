@@ -190,4 +190,22 @@
 
 .play-card14 {    
   animation: play-card14 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+  
 }
+
+
+@-webkit-keyframes fade-out {
+  0% { opacity: 1; -webkit-transform: scale(1);}
+
+  100% {-webkit-transform: scale(.1); opacity: 0;}
+  }
+  
+  .fade-out {
+      -webkit-animation-delay: .2s;
+      -webkit-animation: fade-out .2s ease-in;
+      -webkit-animation-fill-mode: forwards;
+      -webkit-animation-iteration-count: 1;
+      opacity: 1;
+  }
+  

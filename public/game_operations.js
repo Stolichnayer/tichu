@@ -181,6 +181,7 @@ function playCards() {
         //
 
 
+
         addCombinationToTrick(play_pos);
         replaceCardsOnBoard();
 
@@ -195,6 +196,17 @@ function playCards() {
     }
     positionCards();
     positionPlayedCards(play_pos);
+
+    /* Make invisible cards in center
+    var played_cards = document.getElementsByClassName("played_cards");
+    var played = document.getElementsByClassName("played");
+
+    for(let i = 0; i < played_cards.length; i++){
+        played_cards[i].style.display = "none";
+        played[i].style.display = "none";
+    } */
+
+
 }
 
 function moveCards() {
@@ -342,7 +354,8 @@ function positionPlayedCards(play_pos){
         root.style.setProperty(property, left + "px");
         
         var tmp = parseInt(play_pos[i]) + 1;
-       cards[i].classList.add("play-card" + tmp);
+        cards[i].classList.add("play-card" + tmp);
+        cards[i].classList.add("played");
       
     }
 }
@@ -364,14 +377,28 @@ function addCombinationToTrick(play_pos){
 
 function replaceCardsOnBoard(play_pos) {
     
+    // Make invisible cards in center
+        //Own cards
+    
     for(let i = 0; i < 14; i++){
         if(hand_of_player[0][i] == null) {
             var j = i + 1;
             var card = document.getElementById("scene" + j);
-            //card.style.display = "none";
-            card.style.zIndex -= 1000;
+
+            card.style.display = "none";
+            //card.classList.add("fade-out");
+            
+            //card.style.zIndex -= 1000;
             
         }
+    }
+
+        // Cards from other players
+    var played_cards = document.getElementsByClassName("played_cards");
+    
+    for(let i = 0; i < played_cards.length; i++){        
+        //played_cards[i].style.display = "none";
+        played_cards[i].classList.add("fade-out");
     }
      
 
