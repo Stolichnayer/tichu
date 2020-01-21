@@ -247,9 +247,10 @@ footer {
   height: 139px;
   position: absolute; 
   top: 305px;
+  z-index: 1;
 }
 
-.imgCard {
+.otherPlayerCard {
 
   border-radius: 9px;
   border-style: solid;

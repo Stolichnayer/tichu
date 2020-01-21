@@ -380,26 +380,27 @@ function replaceCardsOnBoard(play_pos) {
     // Make invisible cards in center
         //Own cards
     
+    let temp_cards = [];
     for(let i = 0; i < 14; i++){
         if(hand_of_player[0][i] == null) {
             var j = i + 1;
             var card = document.getElementById("scene" + j);
-
-            card.style.display = "none";
+            temp_cards.push(card);
+            //card.style.display = "none";
             //card.classList.add("fade-out");
             
-            //card.style.zIndex -= 1000;
+           // card.style.zIndex -= 1000;
             
         }
     }
 
-        // Cards from other players
-    var played_cards = document.getElementsByClassName("played_cards");
-    
-    for(let i = 0; i < played_cards.length; i++){        
-        //played_cards[i].style.display = "none";
-        played_cards[i].classList.add("fade-out");
-    }
-     
+    setTimeout(()=> {
+        for(let i = 0; i < temp_cards.length; i++){
+            temp_cards[i].style.display = "none";
+        }
+        document.getElementsByClassName("inDiv")[0].innerHTML = "";
+    }, 100);
+
+
 
 }
