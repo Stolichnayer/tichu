@@ -399,7 +399,7 @@ function replaceCardsOnBoard(play_pos) {
             temp_cards[i].style.display = "none";
         }
         document.getElementsByClassName("inDiv")[0].innerHTML = "";
-    }, 100);
+    }, 50);
 
 
 

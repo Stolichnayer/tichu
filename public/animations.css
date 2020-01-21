@@ -38,87 +38,146 @@
 
 
   @keyframes play-card1 {
+    40%{
+      transform: translateY(-280px) scale(1.5);
+    }
+
     100% {
-        transform: translateY(-340px);
+        transform: translateY(-340px) scale(1.0);
         left: var(--position1);
     }
   }
   @keyframes play-card2 {
+    40%{
+      transform: translateY(-280px) scale(1.5);
+    }
+
     100% {
-        transform: translateY(-340px);
+        transform: translateY(-340px) scale(1.0);
         left: var(--position2);
     }
   }
   @keyframes play-card3 {
+    40%{
+      transform: translateY(-280px) scale(1.5);
+    }
+
     100% {
-        transform: translateY(-340px);
+        transform: translateY(-340px) scale(1.0);
         left: var(--position3);
     }
   }
   @keyframes play-card4 {
+    40%{
+      transform: translateY(-280px) scale(1.5);
+    }
+
     100% {
-        transform: translateY(-340px);
+        transform: translateY(-340px) scale(1.0);
         left: var(--position4);
     }
   }
   @keyframes play-card5 {
+    40%{
+      transform: translateY(-280px) scale(1.5);
+    }
+
     100% {
-        transform: translateY(-340px);
+        transform: translateY(-340px) scale(1.0);
         left: var(--position5);
     }
   }
   @keyframes play-card6 {
+    40%{
+      transform: translateY(-280px) scale(1.5);
+    }
+
     100% {
-        transform: translateY(-340px);
+        transform: translateY(-340px) scale(1.0);
         left: var(--position6);
     }
   }
   @keyframes play-card7 {
+    40%{
+      transform: translateY(-280px) scale(1.5);
+    }
+
     100% {
-        transform: translateY(-340px);
+        transform: translateY(-340px) scale(1.0);
         left: var(--position7);
     }
   }
   @keyframes play-card8 {
+    40%{
+      transform: translateY(-280px) scale(1.5);
+    }
+
     100% {
-        transform: translateY(-340px);
+        transform: translateY(-340px) scale(1.0);
         left: var(--position8);
     }
   }
   @keyframes play-card9 {
+    40%{
+      transform: translateY(-280px) scale(1.5);
+    }
+
     100% {
-        transform: translateY(-340px);
+        transform: translateY(-340px) scale(1.0);
         left: var(--position9);
     }
   }
   @keyframes play-card10 {
+    40%{
+      transform: translateY(-280px) scale(1.5);
+    }
+
     100% {
-        transform: translateY(-340px);
+        transform: translateY(-340px) scale(1.0);
         left: var(--position10);
     }
   }
   @keyframes play-card11 {
+    40%{
+      transform: translateY(-280px) scale(1.5);
+    }
+
     100% {
-        transform: translateY(-340px);
+        transform: translateY(-340px) scale(1.0);
         left: var(--position11);
     }
   }
   @keyframes play-card12 {
+    40%{
+      transform: translateY(-280px) scale(1.5);
+    }
+
     100% {
-        transform: translateY(-340px);
+        transform: translateY(-340px) scale(1.0);
         left: var(--position12);
     }
   }
   @keyframes play-card13 {
+    40%{
+      transform: translateY(-280px) scale(1.5);
+    }
+
     100% {
-        transform: translateY(-340px);
+        transform: translateY(-340px) scale(1.0);
         left: var(--position13);
     }
   }
   @keyframes play-card14 {
+
+    40%{
+      transform: translateY(-280px) scale(1.5);      
+    }
+
     100% {
-        transform: translateY(-340px);
+        transform: translateY(-340px) scale(1.0);
         left: var(--position14);
+        
+       
     }
   }
 
